@@ -1,0 +1,111 @@
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="static/Login.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="static/resources/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <a href="Home.html" class="back-button"><i class="fa fa-chevron-left"></i>  Back to Home</a>
+  <h2>Join the Axle Machines Community</h2>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form method='post' action="/signup">
+        <h1>Create Account</h1>
+        <span>or use your email for registration</span>
+        <input type="text" name="first_name" placeholder="First Name" style="color:white" required="required" />
+        <input type="text" name="last_name" placeholder="Last Name" style="color:white" required="required" />
+        <div style="display: flex; align-items: center;">
+          <input type="email" name="email" id="emailsignup" placeholder="Email ID" style="color:white; flex: 1;" required="required" />
+          <button type="button" onclick="sendOTP()" style="margin-left: 1%;">Send OTP</button>
+        </div>
+        <div id="otpField" style="display: none; margin-top: 10px;">
+          <input type="text" name="otp" placeholder="Enter OTP" style="color:white; flex: 1;" required="required" />
+          <button type="button" onclick="verifyOTP()" style="margin-left: 1%;">Verify</button>
+        </div>
+        <input type="password" name="password" placeholder="Password" style="color:white" required="required" />
+        {% if error_messageup %}
+        <p style="color: red; font-size: 65%;">{{ error_messageup }}</p>
+        {% endif %}
+        <button class="signinup" type="submit">Sign Up</button>
+      </form>
+    </div>
+    
+    <br>
+    <div class="form-container sign-in-container">
+      <form method='post' action="/signin">
+          <h1>Sign in</h1>
+          <span>or use your account</span>
+          <input type="email" name="email" placeholder="Email ID" style="color:white" required="required" />
+          <input type="password" name="password" placeholder="Password" style="color:white" required="required" />
+          {% if error_msg %}
+            <p style="color: red; font-size: 65%;">{{ error_msg }}</p>
+          {% endif %}
+          <button class="signinup", type="submit">Sign In</button>
+      </form>
+  </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <img src="static/resources/amlbn.png" height="15%" width="55%">
+          <h1 id="transh">Welcome Back!</h1>
+          <p id="transp">To stay connected with us please login with your personal info</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <img src="static/resources/amlbn.png" height="15%" width="55%">
+          <h1 id="transh">Hello</h1>
+          <p id="transp"><b>Enter your personal details and start your journey with us</b></p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <div class="copyright">
+        <p>&copy; 2023 Axle Machines. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+  <script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    const errorMessage = document.querySelector('.form-container.sign-up-container p');
+        if (errorMessage) {
+            container.classList.add('right-panel-active');
+        }
+
+
+    signUpButton.addEventListener('click', () => {
+      container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+      container.classList.remove("right-panel-active");
+    });
+
+    function sendOTP() {
+      var email = document.getElementById("emailsignup").value;
+        if (is_valid_email(email)) {
+            document.getElementById("otpField").style.display = "flex";
+        } else {
+            alert("Please provide a valid email address.");
+        }
+    }
+    
+    function is_valid_email(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+    function verifyOTP() {
+    }
+  </script>
+</body>
+
+</html>

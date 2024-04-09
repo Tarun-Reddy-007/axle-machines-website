@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infolytics</title>
+    <link rel="icon" href="static/resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="back-button">
+                <a href="Tools.html">&larr; Back</a>
+            </div>
+            <hr>
+            <div class="title title-infolytics"><img src="static/resources/infolytics logo black no bg.png"/></div>
+            <hr>
+            <div id="file-upload-container">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" id="file-upload" accept=".csv, .xlsx">
+                    <button type="submit" id="upload-button">Upload</button>
+                    <div id="upload-message"></div>
+                </form>
+            </div>
+            <div id="table-display-heading"></div>
+            <div id="table-container"></div>
+            <div id="summary-heading"></div>
+            <div id="summary"></div>
+            <div id="visualize-heading"></div>
+            <div id="visualize"></div>
+        </div>
+        <div class="right-panel">
+            <div id="chatbot-interface">
+                <center>
+                    <div class="terri-logo">
+                        <img src="static/resources/terri animate no bg.gif" height="80px" width="auto" style="box-shadow: 5px 5px 5px 5px #888888; margin-bottom: 1.5%; border-radius: 8px;">
+                    </div>
+                </center>
+                <div class="title title-terry-bot">Terri Bot</div>
+                <div id="chatbox"></div>
+                <div id="user-input">
+                    <input type="text" id="user-message" placeholder="Ask Terri....">
+                    <button id="send-button">Send</button>
+                    <button id="clear-button">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/dashboard.js"></script>
+</body>
+</html>

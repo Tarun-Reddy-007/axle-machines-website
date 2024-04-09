@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  align-self: center;
+  font-size: 400%;
+  margin-top: -0.5%;
+}
+
+.background-Tools {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 40px 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav #amlbntools {
+  margin-left: 3%;
+  margin-right: 8%;
+  width: 15%;
+  height: 10%;
+}
+
+nav #hometools,
+nav #projectstools,
+nav #servicestools,
+nav #tools,
+nav #aboutustools {
+  margin-right: 1.5%;
+  margin-left: 1.5%;
+  text-align: center;
+}
+
+nav #signintools {
+  margin-right: 5%;
+  margin-left: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 170%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+}
+
+nav #hometools a:hover,
+nav #projectstools a:hover,
+nav #tools a:hover,
+nav #servicestools a:hover,
+nav #aboutustools a:hover,
+nav #signintools a:hover {
+  color: #a3a3a3;
+}
+
+.cards-container {
+  display:flex; 
+  justify-content: center; 
+}
+
+.cardl {
+  width: 70%;
+  border: 1px solid #ccc;
+  margin: 2%;
+  padding: 2%;
+  display: inline-block;
+  vertical-align: top;
+  border: rgb(62, 193, 45) solid 2px;
+  border-radius: 4%;
+}
+
+.cardl:hover {
+  box-shadow: 0 0 20px rgb(62, 193, 45);
+}
+
+.use-tool-button1 {
+  background-color: black;
+  color: rgb(62, 193, 45);
+  padding: 1%;
+  cursor: pointer;
+  margin-top: 2%;
+  border: rgb(62, 193, 45) solid 2px;
+  max-height:fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.use-tool-button1:hover {
+  border: black solid 2px;
+  background-color: rgb(62, 193, 45);
+  color: black;
+}
+
+.cardl h2 {
+  color: rgb(62, 193, 45);
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+}
+
+.cardl p {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-weight: lighter;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+.card2 {
+  width: 70%;
+  border: 1px solid #ccc;
+  margin: 2%;
+  padding: 2%;
+  display: inline-block;
+  vertical-align: top;
+  border: rgb(45, 154, 193) solid 2px;
+  border-radius: 4%;
+}
+
+.card2:hover {
+  box-shadow: 0 0 20px rgb(45, 154, 193) ;
+}
+
+.use-tool-button2 {
+  background-color: black;
+  color: rgb(45, 154, 193);
+  padding: 1%;
+  cursor: pointer;
+  margin-top: 2%;
+  border: rgb(45, 154, 193) solid 2px;
+  max-height:fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.use-tool-button2:hover {
+  border: black solid 2px;
+  background-color: rgb(45, 154, 193) ;
+  color: black;
+}
+
+.card2 h2 {
+  color: rgb(45, 154, 193) ;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+}
+
+.card2 p {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-weight: lighter;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  nav a {
+    font-size: 100%;
+  }
+  .copyright p{
+    font-size: 80%;
+  }
+  h1{
+    font-size: 230%;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav a {
+    font-size: 150%;
+  }
+  .copyright p{
+    font-size: 100%;
+  }
+  h1{
+      font-size: 300%;
+  }
+  }
+
+@media (max-width: 992px) {
+  nav a {
+    font-size: 120%;
+  }
+  .copyright p{
+    font-size: 90%;
+  }
+  h1{
+      font-size: 260%;
+  }
+  }
+
+@media (max-width: 556px) {
+  nav a {
+    font-size: 80%;
+  }
+  .copyright p{
+    font-size: 70%;
+  }
+  h1{
+      font-size: 200%;
+  }
+  }

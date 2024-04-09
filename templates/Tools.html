@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tools</title>
+    <link rel="stylesheet" href="static/Tools.css">
+    <link rel="icon" href="static/resources/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="background-Tools">
+        <nav>
+            <ul>
+                <li id="amlbntools">
+                    <a href="Home.html">
+                        <img src="static/resources/amlwn.png" height="45%" width="55%" alt="axlelogo">
+                    </a>
+                </li>
+                <li id="hometools">
+                    <a href="Home.html">Home</a>
+                </li>
+                <li id="projectstools">
+                    <a href="Projects.html">Projects</a>
+                </li>
+                <li id="servicestools">
+                    <a href="Services.html">Services</a>
+                </li>
+                <li id="tools">
+                    <a href="Tools.html">Tools</a>
+                </li>
+                <li id="aboutustools">
+                    <a href="Aboutus.html">About Us</a>
+                </li>
+                {% if 'user_id' in session %}
+                <li id="signintools">
+                    <a href="/signout">Sign Out</a>
+                </li>
+                {% else %}
+                <li id="signintools">
+                    <a href="Login.html" class="ghost">Sign In</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        <h1>Axle Tools</h1>
+        <div class="cards-container">
+            <div class="cardl">
+                <h2>Automated Resume Filtering Tool</h2>
+                <p>An effective tool to filter thousands of resumes in pdf format in seconds. Just enter the keywords based on which you want to filter like skills, location etc., upload the zip file with all the resumes in pdf format. The filter folder based on the keywords you entered will be available for download in no time.</p>
+                <button class="use-tool-button1" onclick="redirectToTool('arft.html')">Use Tool</button>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card2">
+                <h2>Axle Infolytics</h2>
+                <p>A Business Intelligence tool which allows to interact, extract, explore, visualize, analyze your data by simply adding querying a chatbot with simple human language.</p>
+                <button class="use-tool-button2" onclick="redirectToTool('dashboard.html')">Use Tool</button>
+            </div>
+        </div>
+        <footer>
+            <div class="copyright">
+                <p>&copy; 2023 Axle Machines. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function redirectToTool(redirectto) {
+            var userId = "{{ session['user_id'] }}"; 
+
+            if (userId) {
+                window.location.href = redirectto;
+            } else {
+                var confirmation = confirm("Login to use the tool."); 
+                if (confirmation) {
+                    window.location.href = "Login.html";
+                } else {
+                    window.location.href('Tools.html')
+                }
+            }
+        }
+    </script>
+</body>
+</html>

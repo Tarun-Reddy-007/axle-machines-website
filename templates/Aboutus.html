@@ -1,0 +1,234 @@
+<!Doctype HTML>
+<HTML>
+
+<Head>
+    <Title>About Us</Title>
+    <link rel='stylesheet' href="static/Aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="static/resources/favicon.ico" type="image/x-icon">
+</Head>
+
+<Body>
+    <div class="background-aboutus">
+        <nav>
+            <ul>
+                <li id="amlwnaboutus">
+                    <a href="Home.html">
+                        <img src="static/resources/amlwn.png" height="45%" width="55%" alt="axlelogo">
+                    </a>
+                </li>
+                <li id="homeaboutus">
+                    <a href="Home.html">Home</a>
+                </li>
+                <li id="projectsaboutus">
+                    <a href="Projects.html">Projects</a>
+                </li>
+                <li id="servicesaboutus">
+                    <a href="Services.html">Services</a>
+                </li>
+                <li id="toolsaboutus">
+                    <a href="Tools.html">Tools</a>
+                </li>
+                <li id="aboutus">
+                    <a href="Aboutus.html">About Us</a>
+                </li>
+                {% if 'user_id' in session %}
+                <li id="signinaboutus">
+                    <a href="/signout">Sign Out</a>
+                </li>
+                {% else %}
+                <li id="signinaboutus">
+                    <a href="Login.html" class="ghost">Sign In</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        <div class="card1">
+            <h1>Our Mission</h1>
+            <p></p>
+        </div>
+        <div class="card2">
+            <h1>Our Vision</h1>
+            <p></p>
+        </div>
+        <center>
+            <h1 class="team">The team</h1>
+        </center>
+        <div class="row">
+            <div class="card-container">
+                <img class="round" src="static/resources/tr.png" alt="user" />
+                <h3>Tarun C Reddy</h3>
+                <h6></h6>
+                <p></p>
+                <div class="buttons">
+                    <button class="primary">
+                        Linkedin
+                    </button>
+                </div>
+            </div>
+            <div class="card-container">
+                <img class="round"
+                    src="static/resources/tahir.jpeg"
+                    alt="user" />
+                <h3>SK Tahir</h3>
+                <h6></h6>
+                <p></p>
+                <div class="buttons">
+                    <button class="primary">
+                        Linkedin
+                    </button>
+                </div>
+            </div>
+            <div class="card-container">
+                <img class="round" src="static/resources/tanisha.jpeg" alt="user" />
+                <h3>Tanisha Dilip</h3>
+                <h6></h6>
+                <p></p>
+                <div class="buttons">
+                    <button class="primary">
+                        Linkedin
+                    </button>
+                </div>
+            </div>
+            <div class="card-container">
+                <img class="round"
+                    src="static/resources/nikhil.jpeg"
+                    alt="user" />
+                <h3>Nikhil Nagaraj Achar</h3>
+                <h6></h6>
+                <p></p>
+                <div class="buttons">
+                    <button class="primary">
+                        Linkedin
+                    </button>
+                </div>
+            </div>
+            <div class="card-container">
+                <img class="round"
+                    src="static/resources/tanushree.jpeg"
+                    alt="user" />
+                <h3>Tanushree Mahato</h3>
+                <h6></h6>
+                <p></p>
+                <div class="buttons">
+                    <button class="primary">
+                        Linkedin
+                    </button>
+                </div>
+            </div>
+            <div class="card-container">
+                <img class="round" src="static/resources/shhp.png" alt="user" />
+                <h3>Shree Hari</h3>
+                <h6></h6>
+                <p></p>
+                <div class="buttons">
+                    <button class="primary">
+                        Linkedin
+                    </button>
+                </div>
+            </div>
+            <div class="card-container">
+                <img class="round"
+                    src="static/resources/pratham.jpeg"
+                    alt="user" />
+                <h3>Pratham Begale</h3>
+                <h6></h6>
+                <p></p>
+                <div class="buttons">
+                    <button class="primary">
+                        Linkedin
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <h1 class="team">Get in touch !</h1>
+        </center>
+        <div class="connect-container">
+            <div class="connect-form">
+                <form id="contactForm" method="post" action="/submit_contact_form">
+                    <input name="name" type="text" class="feedback-input" placeholder="Name" required />
+                    <input name="email" type="email" class="feedback-input" placeholder="Email" required />
+                    <textarea name="text" class="feedback-input" placeholder="Message" required></textarea>
+                    <p id="errorMessage" style="color: red; display: none;"></p>
+                    <input type="submit" value="SUBMIT" />
+                </form>
+            </div>
+            <div class="connect-icons">
+                <ul>
+                    <li>
+                        <a class="facebook" href="https://www.facebook.com/search/top?q=axle%20machines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="linkedin" href="https://www.linkedin.com/company/axle-machines/">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="instagram" href="https://www.instagram.com/axle_machines/">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="gmail" href="mailto:axle.machines@gmail.com">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="twitter" href="https://twitter.com/AxleMachines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <footer>
+                <div class="copyright">
+                    <p>&copy; 2023 Axle Machines. All Rights Reserved.</p>
+                </div>
+            </footer>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            var name = document.getElementsByName('name')[0].value.trim();
+            var email = document.getElementsByName('email')[0].value.trim();
+            var message = document.getElementsByName('text')[0].value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                event.preventDefault();
+                document.getElementById('errorMessage').innerText = 'All fields are required.';
+                document.getElementById('errorMessage').style.display = 'block';
+            } else {
+                document.getElementById('errorMessage').style.display = 'none';
+            }
+        });
+
+    </script>
+
+</Body>
+
+</HTML>

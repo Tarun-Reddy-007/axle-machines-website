@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body {
+  margin: 0;
+  overflow:hidden;
+  background-color: black;
+}
+
+.background-Home {
+  display: flex;
+  flex-direction: column;
+  background-image: url("resources/axlemachineslogogif.gif");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 40px 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav #amlbnhome {
+  margin-left: 3%;
+  margin-right: 8%;
+  width: 15%;
+  height: 10%;
+}
+
+nav #home,
+nav #projectshome,
+nav #toolshome,
+nav #serviceshome,
+nav #aboutushome {
+  margin-right: 1.5%;
+  margin-left: 1.5%;
+  text-align: center;
+}
+
+
+nav #signinhome {
+  margin-right: 5%;
+  margin-left: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 170%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+}
+
+nav #home a:hover,
+nav #projectshome a:hover,
+nav #toolshome a:hover,
+nav #serviceshome a:hover,
+nav #aboutushome a:hover,
+nav #signinhome a:hover {
+  color: #a3a3a3;
+}
+
+.icons {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.icons img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.icons ul {
+  list-style-type: none;
+  margin: 0% 30%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  nav a {
+    font-size: 100%;
+  }
+  .copyright p{
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav a {
+    font-size: 150%;
+  }
+  .copyright p{
+    font-size: 100%;
+  }
+  }
+
+@media (max-width: 992px) {
+  nav a {
+    font-size: 120%;
+  }
+  .copyright p{
+    font-size: 90%;
+  }
+  }
+
+@media (max-width: 556px) {
+  nav a {
+    font-size: 80%;
+  }
+  .copyright p{
+    font-size: 70%;
+  }
+  }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Automated Resume Filtering Tool</title>
+    <link rel="icon" href="static/resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/arft.css">
+</head>
+
+<body>
+    <div class="background-arft">
+        <nav>
+            <ul>
+                <li id="amlbnarft">
+                    <a href="Home.html">
+                        <img src="static/resources/amlwn.png" height="45%" width="55%" alt="axlelogo">
+                    </a>
+                </li>
+                <li id="homearft">
+                    <a href="Home.html">Home</a>
+                </li>
+                <li id="projectsarft">
+                    <a href="Projects.html">Projects</a>
+                </li>
+                <li id="servicesarft">
+                    <a href="Services.html">Services</a>
+                </li>
+                <li id="toolsarft">
+                    <a href="Tools.html">Tools</a>
+                </li>
+                <li id="aboutusarft">
+                    <a href="Aboutus.html">About Us</a>
+                </li>
+                {% if 'user_id' in session %}
+                <li id="signinarft">
+                    <a href="/signout">Sign Out</a>
+                </li>
+                {% else %}
+                <li id="signinarft">
+                    <a href="Login.html" class="ghost">Sign In</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        <a href="Tools.html"><button class="return">Back</button></a>
+        <center>
+            <div class="title">Automated Resume Filtering Tool</div>
+        </center>
+        <div class="form">
+            <form action="/uploadresume" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+
+                <div class="input-container ic2">
+                    <label for="skills" class="placeholder"></label>
+                    <input class="input" name="skills[]" type="text" placeholder="Enter Skills" required />
+                </div>
+
+                <button type="button" class="add" id="add-skill">Add Skill</button>
+
+                <div class="input-container ic2">
+                    <label for="file" class="placeholder"></label>
+                    <input id="file" name="file" class="input" type="file" placeholder=" " />
+
+                </div>
+
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </div>
+            <footer>
+                <div class="copyright">
+                    &copy; 2023 Axle Machines. All Rights Reserved.
+                </div>
+            </footer>
+    </div>
+
+    <script>
+        const addButton = document.getElementById('add-skill');
+
+        addButton.addEventListener('click', () => {
+            const form = document.querySelector('.form form');
+
+            const skillDiv = document.createElement('div');
+            skillDiv.className = 'input-container ic2';
+
+            const skillLabel = document.createElement('label');
+            skillLabel.setAttribute('for', 'skills');
+            skillLabel.className = 'placeholder';
+
+            const skillInput = document.createElement('input');
+            skillInput.className = 'input';
+            skillInput.name = 'skills[]';
+            skillInput.type = 'text';
+            skillInput.placeholder = 'Enter Skills';
+            skillInput.required = true;
+
+            skillDiv.appendChild(skillLabel);
+            skillDiv.appendChild(skillInput);
+            form.insertBefore(skillDiv, addButton);
+        });
+
+        function validateForm() {
+            var fileInput = document.getElementById('file');
+            if (fileInput.files.length === 0) {
+                alert('Please upload a file.');
+                return false; 
+            }
+            return true; 
+        }
+    </script>
+</body>
+
+</html>

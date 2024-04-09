@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Projects</title>
+    <link rel="stylesheet" href="static/Projects.css">
+    <link rel="icon" href="static/resources/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="background-Projects">
+        <nav>
+            <ul>
+                <li id='amlwnprojects'>
+                    <a href="Home.html">
+                        <img src="static/resources/amlwn.png" height="45%" width="55%" alt="axlelogo">
+                    </a>
+                </li>
+                <li id="homeprojects">
+                    <a href="Home.html">Home</a>
+                </li>
+                <li id='projects'>
+                    <a href="Projects.html">Projects</a>
+                </li>
+                <li id='servicesprojects'>
+                    <a href="Services.html">Services</a>
+                </li>
+                <li id='toolsprojects'>
+                    <a href="Tools.html">Tools</a>
+                </li>
+                <li id='aboutusprojects'>
+                    <a href="Aboutus.html">About Us</a>
+                </li>
+                {% if 'user_id' in session %}
+                <li id="signinprojects">
+                    <a href="/signout">Sign Out</a>
+                </li>
+                {% else %}
+                <li id="signinprojects">
+                    <a href="Login.html" class="ghost">Sign In</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="static/resources/findem.png" alt="Image 1">
+                    <div class="slide-content">
+                        <h1 style="font-size: 200%;" class="project-title">FINDEM - Fauna Invasion Detection System</h1>
+                        <p class="project-content">A flagship product that is built using Machine Learning, 
+                            Computer Vision, Auto Encoding and Image Processing to mitigate the invasion 
+                            of animals in agricultured farms. It also helps to safeguard both
+                             commuters and animals to reduce casualties in forest roads 
+                             due to accidents and animal attacks using intelligent random audio playing 
+                             feared by animals in case of animal invasion in farms and display boards in
+                              case of forest roads.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="static/resources/the blac logo white no bg.png" alt="Image 2">
+                    <div class="slide-content">
+                        <h1 style="font-size: 300%;" class="project-title">The Blac</h1>
+                        <p class="project-content">A fast fashion clothing 
+                            brand with a powerful and an interactive web 
+                            interface with virtual try ons of tshirts. 
+                            Each tshirt with a unique design is an edition 
+                            which can be collected and displayed on the 
+                            website with user profiles and community.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="static/resources/infolytics logo cropped.png" alt="Image 3">
+                    <div class="slide-content">
+                        <h1 style="font-size: 300%;" class="project-title">Axle Infolytics</h1>
+                        <p class="project-content">INFOLYTICS by AXLE MACHINES embodies our 
+                            belief in the transformative power of Artificial Intellignence 
+                            for businesses. It helps companies to make smarter decisions and
+                             uncover hidden insights from their data effortlessly. 
+                             We have built INFOLYTICS to be intuitive and user-friendly, 
+                             with features like Terri Bot, out chatbot interface, 
+                             which allows users to interact with their data in plain 
+                             human language. Whether it is about analyzing trends, 
+                             comparing variables, or generating visualizations, 
+                             INFOLYTICS makes it easy to harness the full potential of AI 
+                             in driving business success.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="static/resources/vriddhi.png" alt="Image 4">
+                    <div class="slide-content">
+                        <h1 style="font-size: 300%;" class="project-title">Vriddhi</h1>
+                        <p class="project-content">Slide 4 Content</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="static/resources/rew.png" alt="Image 6">
+                    <div class="slide-content">
+                        <h1 style="font-size: 300%;" class="project-title">ReW - Re Waste</h1>
+                        <p class="project-content">Slide 5 Content</p>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
+            <div class="arrow next" onclick="nextSlide()">&#10095;</div>
+        </div>
+            <footer>
+                <div class="copyright">
+                    <p>&copy; 2023 Axle Machines. All Rights Reserved.</p>
+                </div>
+            </footer>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = `translateX(-${slideIndex * 100}%)`;
+            }
+        }
+
+        function nextSlide() {
+            showSlide(++slideIndex);
+        }
+
+        function prevSlide() {
+            showSlide(--slideIndex);
+        }
+
+        showSlide(slideIndex);
+    </script>
+
+</body>
+
+</html>

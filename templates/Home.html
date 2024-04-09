@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="static/Home.css">
+    <link rel="icon" href="static/resources/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="background-Home">
+        <nav>
+            <ul>
+                <li id="amlbnhome">
+                    <a href="Home.html">
+                        <img src="static/resources/amlbn.png" height="45%" width="55%" alt="axlelogo">
+                    </a>
+                </li>
+                <li id="home">
+                    <a href="Home.html">Home</a>
+                </li>
+                <li id="projectshome">
+                    <a href="Projects.html">Projects</a>
+                </li>
+                <li id="serviceshome">
+                    <a href="Services.html">Services</a>
+                </li>
+                <li id="toolshome">
+                    <a href="Tools.html">Tools</a>
+                </li>
+                <li id="aboutushome">
+                    <a href="Aboutus.html">About Us</a>
+                </li>
+                {% if 'user_id' in session %}
+                <li id="signinhome">
+                    <a href="/signout">Sign Out</a>
+                </li>
+                {% else %}
+                <li id="signinhome">
+                    <a href="Login.html" class="ghost">Sign In</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        <div class="icons">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/axle_machines/" target="_blank">
+                        <img src="static/resources/igt.png" alt="IGT">
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://www.twitter.com/axlemachines/" target="_blank">
+                        <img src="static/resources/tgt.png" alt="TGT">
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://www.facebook.com/search/top?q=axle%20machines" target="_blank">
+                        <img src="static/resources/fgt.png" alt="FGT">
+                    </a>
+                </li>
+            </ul>
+        </div>
+            <footer>
+                <div class="copyright">
+                    <p>&copy; 2023 Axle Machines. All Rights Reserved.</p>
+                </div>
+            </footer>
+    </div>
+</body>
+
+</html>

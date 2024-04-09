@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body {
+  margin: 0;
+  background-color: black;
+  overflow:hidden;
+}
+
+.background-Services {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 40px 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav #amlwnservices {
+  margin-left: 3%;
+  margin-right: 8%;
+  width: 15%;
+  height: 10%;
+}
+
+nav #homeservices,
+nav #projectsservices,
+nav #services,
+nav #toolsservices,
+nav #aboutusservices{
+  margin-right: 1.5%;
+  margin-left: 1.5%;
+  text-align: center;
+}
+
+nav #signinservices {
+  margin-right: 5%;
+  margin-left: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 170%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+}
+
+nav #homeservices a:hover,
+nav #projectsservices a:hover,
+nav #toolsservices a:hover,
+nav #services a:hover,
+nav #aboutusservices a:hover,
+nav #signinservices a:hover {
+  color: #a3a3a3;
+}
+
+#message {
+  font-family: 'Poppins', sans-serif;
+  font-size: 300%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(62, 193, 45), rgb(0, 0, 0));
+  background-size: 100% 4%;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  transition: background-size .7s, background-position .5s ease-in-out;
+  padding: 2%;
+  color: rgb(62, 193, 45);
+}
+
+#message:hover {
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+  color: black;
+  border-radius: 30px;
+}
+
+.icons {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.icons img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.icons ul {
+  list-style-type: none;
+  margin: 0% 30%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  nav a {
+    font-size: 100%;
+  }
+  .copyright p{
+    font-size: 80%;
+  }
+  #message{
+    font-size: 150%;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav a {
+    font-size: 150%;
+  }
+  .copyright p{
+    font-size: 100%;
+  }
+  #message{
+    font-size: 300%;
+  }
+  }
+
+@media (max-width: 992px) {
+  nav a {
+    font-size: 120%;
+  }
+  .copyright p{
+    font-size: 90%;
+  }
+  #message{
+    font-size: 215%;
+  }
+  }
+
+@media (max-width: 556px) {
+  nav a {
+    font-size: 90%;
+  }
+  .copyright p{
+    font-size: 70%;
+  }
+  #message{
+    font-size: 150%;
+  }
+  }
